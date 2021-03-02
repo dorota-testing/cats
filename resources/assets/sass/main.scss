@@ -1,0 +1,140 @@
+$font-stack: Times, serif;
+$font-color: #414e00;
+$font-color-contrast: #b3002d;
+$dark-color: #819a00;
+$darkest-color: #748b00;
+$light-color: #e6ff99;
+$contrast-color: #ffad73;
+$dark-grey: #333;
+$light-grey: #eee;
+
+// Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Exo+2:400,600,800');
+
+// Font Variables  
+$font1: 'Exo 2', sans-serif;
+
+body {
+	font-family: $font1;
+	color: $font-color;
+}
+h2 {
+	font-size: 20px;
+	margin: 10px 0 5px 0;
+}
+a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+
+.container {
+	max-width: 730px;
+}
+.top {
+	background-color: $dark-color;
+}
+nav {
+	background-color: $dark-color;
+	border-top: 1px solid $darkest-color;
+	.active {
+		background-color: $light-color;
+		border-radius: 6px 6px 0 0;
+		a {
+			color: $dark-grey;
+		}
+	}
+	a {
+	display: inline-block;
+	padding: 15px 5% 15px 0;
+	font-size: 18px;
+	width: 100%;
+	color: $light-grey;
+	}
+}
+.menu > div{
+	border-left: 1px solid $darkest-color;
+}
+.menu > div >div{
+	border-right: 1px solid $darkest-color;
+}
+.header {
+	background-color: $light-color;
+	.img {
+		width: 180px;
+		height: 180px;
+		border: 1px solid $dark-grey;
+		margin: 30px 0;
+	}
+	img {
+		width: 100%;
+	}
+	h1{
+		color: $font-color-contrast;
+		font-weight: bold;
+	}
+	
+}
+.center{
+	min-height: 400px;
+	margin-bottom: 40px;
+}
+.box{
+	border: 1px solid $dark-grey;
+	vertical-align: top;
+	position: relative;
+	p {
+		display: inline-block;
+		margin: 0px;
+	}
+	.left {
+		width: 40%;
+		float: left;
+	}
+	.right {
+		width: 55%;
+		margin: 2%;	
+	}	
+	img {
+	width: 100%;
+	}
+	.box-text{
+		position: absolute;
+		background: $light-grey;
+		z-index: 9999;
+		bottom: 0px;
+		width: 100%;
+		padding: 5px 10px;
+		color: $dark-grey;
+		background-color: rgba(250,250,250,0.6);
+	}
+}
+
+.footer {
+	background-color: $dark-grey;
+	color: $light-grey;
+	a {
+	color: $light-grey;
+	}
+}
+.no-gutters {
+  padding-right: 0;
+  padding-left: 0;
+ 
+}
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 260px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 220px;
+}

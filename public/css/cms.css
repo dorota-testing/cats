@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css?family=Exo+2:400,600,800");
+body {
+  font-family: "Exo 2", sans-serif;
+  color: #414e00; }
+
+a {
+  color: #414e00; }
+
+a:hover {
+  text-decoration: none;
+  color: inherit; }
+
+h1 {
+  margin: 5px 0 15px 0;
+  font-size: 24px; }
+  h1 a {
+    margin-left: 10px; }
+
+.container {
+  max-width: 730px; }
+
+.navbar-default {
+  background-color: #819a00;
+  border-bottom: 1px solid #748b00; }
+  .navbar-default .navbar-brand {
+    color: #eee; }
+  .navbar-default .navbar-nav > li > a {
+    color: #eee; }
+
+#app-layout .panel {
+  margin-top: 40px;
+  border: 1px solid #748b00; }
+
+#app-layout .panel-heading {
+  border-bottom: 1px solid #748b00;
+  background-color: #819a00;
+  color: #eee; }
+
+.menu {
+  border: 1px solid #748b00; }
+  .menu p {
+    background-color: #819a00;
+    color: #eee;
+    text-align: center;
+    padding: 5px;
+    margin: 0; }
+  .menu ul {
+    list-style: outside none none;
+    padding: 0;
+    margin: 0; }
+    .menu ul li {
+      padding: 5px 10px; }
+    .menu ul .active {
+      background-color: #e6ff99; }
+
+.btn-primary {
+  background-color: #819a00;
+  color: #eee;
+  border: 1px solid #748b00; }
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus, .btn-primary:active:focus, .btn-primary:active:hover {
+  background-color: #708600;
+  color: #eee;
+  border: 1px solid #748b00; }
+
+.form-horizontal .control-label {
+  text-align: left; }
+
+.btn-link {
+  color: #333; }
+
+.btn-link:hover {
+  color: #333; }
+
+.cell {
+  display: table-cell;
+  padding: 6px 5px 4px 10px;
+  border-bottom: 1px solid #748b00; }
+
+.table-row {
+  display: table-row;
+  padding: 5px;
+  border-bottom: 1px solid #748b00; }
+
+.table {
+  display: table; }
+
+.th {
+  background-color: #819a00;
+  color: #eee; }
+
+.options {
+  min-width: 150px;
+  text-align: right; }
+
+.error {
+  border: 1px solid red; }
+
+.cmsImage {
+  width: 100%;
+  margin-top: 10px;
+  max-width: 200px; }
+
+.hoverTip {
+  position: relative; }
+  .hoverTip .tip {
+    position: absolute;
+    top: -55px;
+    left: -80px;
+    background: #fff;
+    padding: 5px 10px;
+    border: 1px solid #adadad;
+    border-radius: 4px; }
+
+span.delete {
+  font-size: 28px;
+  margin: 2px 0 0 0;
+  cursor: pointer; }
+
+.no-gutters {
+  padding-right: 0;
+  padding-left: 0; }
+  .no-gutters > [class^="col-"],
+  .no-gutters > [class*=" col-"] {
+    padding-right: 0;
+    padding-left: 0; }
+
+/*# sourceMappingURL=cms.css.map */

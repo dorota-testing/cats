@@ -1,0 +1,160 @@
+$font-stack: Times, serif;
+$font-color: #414e00;
+$font-color-contrast: #b3002d;
+$dark-color: #819a00;
+$dark-color-hover: #708600;
+$darkest-color: #748b00;
+$light-color: #e6ff99;
+$contrast-color: #ffad73;
+$dark-grey: #333;
+$light-grey: #eee;
+
+$break-x-small: 360px;
+
+// Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Exo+2:400,600,800');
+
+// Font Variables  
+$font1: 'Exo 2', sans-serif;
+
+body {
+	font-family: $font1;
+	color: $font-color;
+}
+a {
+	color: $font-color;
+}
+a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+h1 {
+	margin: 5px 0 15px 0;
+	font-size: 24px;
+	a {
+	margin-left: 10px;
+	}
+}
+.container {
+	max-width: 730px;
+}
+
+.navbar-default {
+	background-color: $dark-color;
+	border-bottom: 1px solid $darkest-color;
+	.navbar-brand {
+		color: $light-grey;
+	}
+	.navbar-nav >li >a{
+			color: $light-grey;
+	}
+}
+
+#app-layout {
+	.panel {
+	margin-top: 40px;
+	border: 1px solid $darkest-color;	
+	}
+	.panel-heading{
+	border-bottom: 1px solid $darkest-color;
+	background-color: $dark-color;
+	color: $light-grey;
+	}
+}
+.menu {
+	border: 1px solid $darkest-color;
+	p {
+	background-color: $dark-color;
+	color: $light-grey;
+	text-align: center;
+	padding: 5px;
+	margin: 0;
+	}
+	ul {
+	list-style: outside none none;
+	padding: 0;
+	margin: 0;
+		li{
+		padding: 5px 10px;
+		}
+		.active {
+		background-color: $light-color;
+		}
+	}
+}
+.btn-primary {
+	background-color: $dark-color;
+	color: $light-grey;
+	border: 1px solid $darkest-color;
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus, .btn-primary:active:focus, .btn-primary:active:hover {
+	background-color: $dark-color-hover;
+	color: $light-grey;
+	border: 1px solid $darkest-color;
+}
+
+.form-horizontal .control-label {
+	text-align: left;
+}
+.btn-link {color: $dark-grey;}
+.btn-link:hover {color: $dark-grey;}
+.cell {
+	display: table-cell;
+	padding: 6px 5px 4px 10px;
+	border-bottom: 1px solid $darkest-color;	
+}
+.table-row {
+	display: table-row;
+	padding: 5px;
+	border-bottom: 1px solid $darkest-color;
+}
+.table {
+	display: table;
+}
+.th {
+	background-color: $dark-color;
+	color: $light-grey;
+}
+.options {
+	min-width: 150px;
+	text-align: right;
+}
+.error {
+	border: 1px solid red;
+}
+.cmsImage {
+	width: 100%;
+	margin-top: 10px;
+	max-width: 200px;
+	@media screen and (max-width: $break-x-small) {
+
+	}	
+}
+.hoverTip {
+	position: relative;
+	.tip {
+		position: absolute;
+		top: -55px;
+		left: -80px;
+		background: #fff;
+		padding: 5px 10px;	
+		border: 1px solid #adadad;
+		border-radius: 4px;
+	}
+}
+span.delete {
+	font-size: 28px;
+	margin: 2px 0 0 0;
+	cursor: pointer;
+	
+}
+.no-gutters {
+  padding-right: 0;
+  padding-left: 0;
+
+  & > [class^="col-"],
+  & > [class*=" col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
