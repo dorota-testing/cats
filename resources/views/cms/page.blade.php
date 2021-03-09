@@ -20,7 +20,7 @@ $strPageDesc = isset($aOld['page_desc'])? $aOld['page_desc'] : $page->page_desc;
 
 @section('content')
 		<div class="col-md-10">	
-			<h1><?=($page->id != '' ? 'Edit':'Add')?> {{$url}} <a href="/select/{{$url}}" class="pull-right btn btn-primary">Exit</a></h1>
+			<h1><?=($page->id != '' ? 'Edit':'Add')?> {{$url}} <a href="{{ route('/') }}/select/{{$url}}" class="pull-right btn btn-primary">Exit</a></h1>
 			@if($saved)
 			<p class="alert alert-success" role="alert">Saved successfully.</p>
 			@endif
@@ -35,7 +35,7 @@ $strPageDesc = isset($aOld['page_desc'])? $aOld['page_desc'] : $page->page_desc;
 			</p>
 
 			@endif
-			<form class="form-horizontal" method="post" action="/{{$url}}/<?=($page->id != '' ? $page->id : 0)?>" enctype="multipart/form-data" files="true">
+			<form class="form-horizontal" method="post" action="{{ route('/') }}/{{$url}}/<?=($page->id != '' ? $page->id : 0)?>" enctype="multipart/form-data" files="true">
 				{{ csrf_field() }}
 				<div class="form-group">
 					<label class="col-sm-3 col-md-3 control-label" for="url">Page URL</label>

@@ -30,7 +30,7 @@ $intro = $page->intro;
 					<div class="col-xs-offset-1 col-sm-offset-0 col-md-offset-0 col-xs-10 col-sm-12 col-md-12 cat-slider box no-gutters">
 					<?php foreach($cats as $cat){?>
 						<div class="box no-gutters">
-						<a href="/cats/{{ $cat->id }}">
+						<a href="{{ route('/') }}/cats/{{ $cat->id }}">
 							<img src="<?= asset('images/cat/'.$cat->image);?>" />
 							<div class="box-text">
 							<p>
@@ -52,7 +52,7 @@ $intro = $page->intro;
 						$date = date_create($article->date);
 						?>
 						<div class="col-xs-12 col-sm-6 col-md-6 box no-gutters">
-						<a href="/news/{{ $article->url }}">
+						<a href="{{ route('/') }}/news/{{ $article->url }}">
 							<img src="<?= asset('images/news/'.$article->image);?>" />
 							<div class="box-text">
 							<p>							

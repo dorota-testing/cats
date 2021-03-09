@@ -31,7 +31,7 @@ $intro = $page->intro;
 									<br>Born: <?=date_create($cat['dob'])->format('d M Y');?>
 									<br>Gender: <?=$cat['gender'];?>
 									<br>Owner: <?=$cat->owner['forename'].' '.$cat->owner['surname'];?>
-									<br><a href="/cats<?=$strParams != '?' ? $strParams : ''?>">Back to list >></a>
+									<br><a href="{{ route('cats') }}<?=$strParams != '?' ? $strParams : ''?>">Back to list >></a>
 								</p>
 							</div>
 						</div>
@@ -63,7 +63,7 @@ $intro = $page->intro;
 				<h1>Cats listing</h1>
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12 ">
-							<form method="get" action="/cats">								
+							<form method="get" action="{{ route('cats') }}">								
 								<div class="form-group row">
 									<label class="col-xs-4 col-sm-1 col-md-1 control-label" for="breed">Breed</label>
 									<div class="col-xs-8 col-sm-4 col-md-4">

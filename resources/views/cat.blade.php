@@ -22,10 +22,10 @@ $intro = $page->intro;
 							<p>Owner is {{$cat->owner['forename'].' '.$cat->owner['surname']}}</p>
 							<p>Date of Birth is {{$cat->dob}}</p>
 							<p><img width="50" src="<?= asset('images/cat/'.$cat->image);?>"> {{$cat->image}}</p>
-							<a href="/cats/{{$cat->id}}/edit">Edit Cat >></a>
+							<a href="{{ route('cats') }}/{{$cat->id}}/edit">Edit Cat >></a>
 							<?php }?>
 				<h1>Add a cat</h1>
-				<form method="post" action="/breeds/{{$breed->id}}/cat">
+				<form method="post" action="{{ route('/') }}/breeds/{{$breed->id}}/cat">
 					<input type="text" class="form-control" name="name" placeholder="name" value="{{old('name')}}">
 					<input type="text" class="form-control" name="owner_id" placeholder="owner id" value="{{old('owner_id')}}">
 					<input type="text" class="form-control" name="dob" placeholder="dob" value="{{old('dob')}}">

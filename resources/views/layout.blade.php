@@ -11,10 +11,10 @@
 		<meta name="csrf-token" content="{{ csrf_token() }}" />
 		<link rel="icon" href="">
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-        <link href="/css/app.css" rel="stylesheet" type="text/css">
-        <link href="/css/main.css" rel="stylesheet" type="text/css">
-		<link rel="stylesheet" type="text/css" href="/js/slick-1.6.0/slick/slick.css"/>		
-		<link rel="stylesheet" type="text/css" href="/js/slick-1.6.0/slick/slick-theme.css"/>
+        <link href="{{ asset('/css/app.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('/css/main.css') }}" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="{{ asset('/js/slick-1.6.0/slick/slick.css') }}"/>		
+		<link rel="stylesheet" type="text/css" href="{{ asset('/js/slick-1.6.0/slick/slick-theme.css') }}"/>
 		
     </head>
     <body>
@@ -36,16 +36,16 @@
 			<div class="container menu">
 				<div class="row no-gutters text-center">
 					<div class="col-xs-3 col-sm-3 col-md-3 <?=($active=='home'?'active':'')?>">
-						<a href="/">HOME</a>
+						<a href="{{ route('/') }}">HOME</a>
 					</div>
 					<div class="col-xs-3 col-sm-3 col-md-3 <?=($active=='breeds'?'active':'')?>">
-						<a href="/breeds">BREEDS</a>
+						<a href="{{ route('breeds') }}">BREEDS</a>
 					</div>					
 					<div class="col-xs-3 col-sm-3 col-md-3 <?=($active=='cats'?'active':'')?>">
-						<a href="/cats">CATS</a>
+						<a href="{{ route('cats') }}">CATS</a>
 					</div>
 					<div class="col-xs-3 col-sm-3 col-md-3 <?=($active=='news'?'active':'')?>">
-						<a href="/news">NEWS</a>
+						<a href="{{ route('news') }}">NEWS</a>
 					</div>
 				</div>
 			</div>
@@ -76,10 +76,10 @@
 				<br>
 				<br>
 					<div class="col-xs-4 col-sm-2 col-md-2">						
-						<p><a href="/">HOME</a></p>
-						<p><a href="/breeds">BREEDS</a></p>
-						<p><a href="/cats">CATS</a></p>
-						<p><a href="/news">NEWS</a></p>
+						<p><a href="{{ route('/') }}">HOME</a></p>
+						<p><a href="{{ route('breeds') }}">BREEDS</a></p>
+						<p><a href="{{ route('cats') }}">CATS</a></p>
+						<p><a href="{{ route('news') }}">NEWS</a></p>
 					</div>
 					<div class="col-xs-8 col-sm-3 col-md-3  col-sm-offset-2 col-md-offset-2">
 						<p>This website is just a learning aid. CatBreedersClub does not exist in reality.</p>
@@ -91,8 +91,8 @@
 			</div>
 		</div>		
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
-	<script src="/js/bootstrap.min.js"></script>		
-	<script src="/js/main.js"></script>
-	<script src="/js/slick-1.6.0/slick/slick.min.js"></script>		
+	<script src="{{ asset('/js/bootstrap.min.js') }}"></script>		
+	<script src="{{ asset('/js/main.js') }}"></script>
+	<script src="{{ asset('/js/slick-1.6.0/slick/slick.min.js') }}"></script>		
     </body>
 </html>

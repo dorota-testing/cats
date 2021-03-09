@@ -10,9 +10,9 @@
 		<meta name="csrf-token" content="{{ csrf_token() }}" />
 		<link rel="icon" href="">
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-        <link href="/css/app.css" rel="stylesheet" type="text/css">
-        <link href="/css/cms.css" rel="stylesheet" type="text/css">		
-        <link href="/js/bootstrap-datepicker/css/bootstrap-datepicker3.standalone.min.css" rel="stylesheet" type="text/css">		
+        <link href="{{ asset('/css/app.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('/css/cms.css') }}" rel="stylesheet" type="text/css">		
+        <link href="{{ asset('/js/bootstrap-datepicker/css/bootstrap-datepicker3.standalone.min.css') }}" rel="stylesheet" type="text/css">		
     </head>
 <body id="app-layout">
 @if(Auth::user())	
@@ -77,9 +77,9 @@
 </footer>
     <!-- JavaScripts -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
-	<script src="/js/bootstrap.min.js"></script>
-	<script src="/js/mainCMS.js"></script>
-	<script src="/js/ckeditor/ckeditor.js"></script>
-	<script src="/js/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+	<script src="{{ asset('/js/bootstrap.min.js') }}"></script>	
+	<script src="{{ asset('/js/mainCMS.js') }}"></script>
+	<script src="{{ asset('/js/ckeditor/ckeditor.js') }}"></script>
+	<script src="{{ asset('/js/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}"></script>	
 </body>
 </html>

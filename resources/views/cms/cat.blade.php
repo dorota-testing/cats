@@ -23,7 +23,7 @@ $aGender = array('female','male');
 
 @section('content')
 		<div class="col-md-10">	
-			<h1><?=($cat->id != '' ? 'Edit':'Add')?> {{$url}} <a href="/select/{{$url}}/{{ $owner_id }}" class="pull-right btn btn-primary">Exit</a></h1>
+			<h1><?=($cat->id != '' ? 'Edit':'Add')?> {{$url}} <a href="{{ route('/') }}/select/{{$url}}/{{ $owner_id }}" class="pull-right btn btn-primary">Exit</a></h1>
 			@if($saved)
 			<p class="alert alert-success" role="alert">Saved successfully.</p>
 			@endif
@@ -38,7 +38,7 @@ $aGender = array('female','male');
 			</p>
 
 			@endif
-			<form class="form-horizontal" method="post" action="/{{$url}}/{{ $owner_id }}/<?=($cat->id != '' ? $cat->id : 0)?>" enctype="multipart/form-data" files="true">
+			<form class="form-horizontal" method="post" action="{{ route('/') }}/{{$url}}/{{ $owner_id }}/<?=($cat->id != '' ? $cat->id : 0)?>" enctype="multipart/form-data" files="true">
 				{{ csrf_field() }}
 				<div class="form-group">
 					<label class="col-sm-3 col-md-3 control-label" for="name">Name</label>

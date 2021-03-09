@@ -21,7 +21,7 @@
 	<p><img src="<?= asset('images/cat/'.$cat->image);?>"> {{$cat->image}}</p>
 	
 				<h1>Edit cat</h1>
-				<form method="post" action="/cats/{{$cat->id}}">
+				<form method="post" action="{{ route('/') }}/cats/{{$cat->id}}">
 					{{ method_field('PATCH') }} <?php //this can also be method DELETE?>
 					<input type="text" class="form-control" name="name" value="{{$cat->name}}">
 					<input type="text" class="form-control" name="user_id" value="{{$cat->user_id}}">

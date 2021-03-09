@@ -26,16 +26,16 @@ Route::get('firstpage', function () {
 });
 /*/
 
-	Route::get('/', 'PagesController@welcome');
-	Route::get('breeds', 'PagesController@breeds');
-	Route::get('breeds/{breed}', 'PagesController@breed');
+	Route::get('/', 'PagesController@welcome')-> name('/');
+	Route::get('breeds', 'PagesController@breeds')-> name('breeds');
+	Route::get('breeds/{breed}', 'PagesController@breed')-> name('breeds/{breed}');
 //	Route::get('breeds/{breed}/cat', 'PagesController@cat');
 //	Route::post('breeds/{breed}/cat', 'PagesController@storeCat'); //this is where we post from a form
 	
-	Route::get('news', 'PagesController@news');
+	Route::get('news', 'PagesController@news')-> name('news');
 	Route::get('news/{url}', 'PagesController@article');
 	
-	Route::get('cats', 'CatsController@index');
+	Route::get('cats', 'CatsController@index')-> name('cats');
 	Route::get('cats/{cat}', 'CatsController@show');
 //	Route::get('cats/{lorem}/edit', 'CatsController@edit');
 //	Route::patch('cats/{cat}', 'CatsController@update'); //patch = update
@@ -43,7 +43,7 @@ Route::get('firstpage', function () {
 
 Route::auth(); 
 
-Route::get('/cms', 'HomeController@index');
+Route::get('/cms', 'HomeController@index')-> name('cms');
 Route::get('/select/{url}', 'HomeController@select');
 Route::get('/delete/{url}/{id}', 'HomeController@delete');//delete
 Route::get('/select/{url}/{id}', 'HomeController@select');//select childern of id1

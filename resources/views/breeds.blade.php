@@ -30,7 +30,7 @@ $intro = $page->intro;
 									<br>Country: <?=$breed['country'];?>
 									<br>Coat: <?=$breed['hair'];?>
 									<br>Colour: <?=$breed['colour'];?>
-									<br><a href="/breeds<?=Session::get('pageBreed')!=''?'?page='.Session::get('pageBreed'):''?>">Back to list >></a>
+									<br><a href="{{ route('breeds') }}<?=Session::get('pageBreed')!=''?'?page='.Session::get('pageBreed'):''?>">Back to list >></a>
 								</p>							
 							</div>
 						</div>

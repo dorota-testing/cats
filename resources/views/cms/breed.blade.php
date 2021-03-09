@@ -20,7 +20,7 @@ $strDesc = isset($aOld['desc'])? $aOld['desc'] : $breed->desc;
 
 @section('content')
 		<div class="col-md-10">	
-			<h1><?=($breed->id != '' ? 'Edit':'Add')?> {{$url}} <a href="/select/{{$url}}" class="pull-right btn btn-primary">Exit</a></h1>
+			<h1><?=($breed->id != '' ? 'Edit':'Add')?> {{$url}} <a href="{{ route('/') }}/select/{{$url}}" class="pull-right btn btn-primary">Exit</a></h1>
 			@if($saved)
 			<p class="alert alert-success" role="alert">Saved successfully.</p>
 			@endif
@@ -35,7 +35,7 @@ $strDesc = isset($aOld['desc'])? $aOld['desc'] : $breed->desc;
 			</p>
 
 			@endif
-			<form class="form-horizontal" method="post" action="/{{$url}}/<?=($breed->id != '' ? $breed->id : 0)?>" enctype="multipart/form-data" files="true">
+			<form class="form-horizontal" method="post" action="{{ route('/') }}/{{$url}}/<?=($breed->id != '' ? $breed->id : 0)?>" enctype="multipart/form-data" files="true">
 				{{ csrf_field() }}
 				<div class="form-group">
 					<label class="col-sm-3 col-md-3 control-label" for="breed">Breed</label>

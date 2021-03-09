@@ -18,7 +18,7 @@ $strSurname = isset($aOld['surname'])? $aOld['surname'] : $owner->surname;
 
 @section('content')
 		<div class="col-md-10">	
-			<h1><?=($owner->id != '' ? 'Edit':'Add')?> {{$url}} <a href="/select/{{$url}}" class="pull-right btn btn-primary">Exit</a></h1>
+			<h1><?=($owner->id != '' ? 'Edit':'Add')?> {{$url}} <a href="{{ route('/') }}/select/{{$url}}" class="pull-right btn btn-primary">Exit</a></h1>
 			@if($saved)
 			<p class="alert alert-success" role="alert">Saved successfully.</p>
 			@endif
@@ -33,7 +33,7 @@ $strSurname = isset($aOld['surname'])? $aOld['surname'] : $owner->surname;
 			</p>
 
 			@endif
-			<form class="form-horizontal" method="post" action="/{{$url}}/<?=($owner->id != '' ? $owner->id : 0)?>" enctype="multipart/form-data" files="true">
+			<form class="form-horizontal" method="post" action="{{ route('/') }}/{{$url}}/<?=($owner->id != '' ? $owner->id : 0)?>" enctype="multipart/form-data" files="true">
 				{{ csrf_field() }}
 				<div class="form-group">
 					<label class="col-sm-3 col-md-3 control-label" for="forename">Forename</label>

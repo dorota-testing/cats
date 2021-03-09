@@ -5,10 +5,10 @@
 			<h1>{{str_plural($url)}} <?=($strParent!='' ? ' of '.$strParent : '')?> 
 			
 			@if($table['add'])
-			<a href="/{{ $url }}/<?=($id!='' ? $id.'/' : '')?>0" class="btn btn-warning pull-right">Add {{$url}}</a>
+			<a href="{{ route('/') }}/{{ $url }}/<?=($id!='' ? $id.'/' : '')?>0" class="btn btn-warning pull-right">Add {{$url}}</a>
 			@endif	
 			@if(!empty($table['parent']))
-			<a href="/select/{{ $table['parent'][0] }}" class="btn btn-warning pull-right">Back to {{str_plural($table['parent'][0])}}</a>
+			<a href="{{ route('/') }}/select/{{ $table['parent'][0] }}" class="btn btn-warning pull-right">Back to {{str_plural($table['parent'][0])}}</a>
 			@endif				
 			<?php 
 //			dump( $id);
@@ -47,16 +47,16 @@
 							foreach($table['buttons'] as $link=>$name){
 							$itemCount = $row->$name()->count();
 						?>
-							<a href="/select/{{ $link }}/{{ $row->id }}" class="btn btn-warning">{{ ucfirst($name) }} ({{ $itemCount }})</a>
+							<a href="{{ route('/') }}/select/{{ $link }}/{{ $row->id }}" class="btn btn-warning">{{ ucfirst($name) }} ({{ $itemCount }})</a>
 						<?php }
 						} 
 						?>
 						@if($table['edit'])
-						<a href="/{{ $url }}/<?=($id!='' ? $id.'/' : '')?>{{ $row->id }}" class="btn btn-primary">Edit</a>
+						<a href="{{ route('/') }}/{{ $url }}/<?=($id!='' ? $id.'/' : '')?>{{ $row->id }}" class="btn btn-primary"> Edit</a>
 						@endif
 						@if($table['delete'])
 							@if(Auth::user()->user_role=='admin')
-						<a href="/delete/{{ $url }}/{{ $row->id }}" class="btn btn-danger" onclick="return  confirm('Are you sure you want to Delete?')">Delete</a>
+						<a href="{{ route('/') }}/delete/{{ $url }}/{{ $row->id }}" class="btn btn-danger" onclick="return  confirm('Are you sure you want to Delete?')">Delete</a>
 							@else
 						<span class="btn btn-default hoverTip">Delete</span>
 							@endif
