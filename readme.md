@@ -3,3 +3,4 @@
 This site uses sqlite db.
 
 The site consists of two parts - public and cms. To access cms go to http://yourdomain-or-localhost/cms. 
+
